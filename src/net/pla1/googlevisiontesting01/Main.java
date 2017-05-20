@@ -25,13 +25,12 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         Main main = new Main();
-        main.test();
+        main.annotateImage();
     }
 
-    private void test() throws Exception {
+    private void annotateImage() throws Exception {
         StopWatch stopWatch = new StopWatch();
         Properties properties = new Properties();
-
         properties.load(new FileInputStream("/etc/net.pla1.googlevisiontesting01.Main.properties"));
         File file = new File("/tmp/screenshot.png");
         byte[] bytes = Base64.encodeBase64(FileUtils.readFileToByteArray(file));
